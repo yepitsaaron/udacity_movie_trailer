@@ -54,8 +54,10 @@ THE_MATRIX = media.Movie(
 
 movies = [DARK_KNIGHT,INTERSTELLAR,WALLE,GLADIATOR,PULP_FICTION,REQUIEM_DREAM,THE_MATRIX]
 
-fresh_tomatoes.open_movies_page(movies, str(PORT))
 
 httpd = SocketServer.TCPServer(("", PORT), Handler)
 print "serving at port", PORT
+
+fresh_tomatoes.construct_movie_page(movies, str(PORT))
+
 httpd.serve_forever()

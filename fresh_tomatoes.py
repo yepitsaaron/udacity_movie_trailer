@@ -150,7 +150,7 @@ def create_movie_tiles_content(movies):
     return content
 
 
-def open_movies_page(movies, PORT):
+def construct_movie_page(movies, PORT):
     # Create or overwrite the output file
     output_file = open('favorite_movies.html', 'w')
 
