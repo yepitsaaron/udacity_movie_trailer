@@ -150,7 +150,7 @@ def create_movie_tiles_content(movies):
     return content
 
 
-def open_movies_page(movies):
+def open_movies_page(movies, PORT):
     # Create or overwrite the output file
     output_file = open('favorite_movies.html', 'w')
 
@@ -165,4 +165,4 @@ def open_movies_page(movies):
     # open the output file in the browser (in a new tab, if possible)
     # url = os.path.abspath(output_file.name)
     url = output_file.name
-    webbrowser.open('http://localhost:8080/' + url, new=2)
+    webbrowser.open('http://localhost:'+ PORT + '/' + url, new=2)
